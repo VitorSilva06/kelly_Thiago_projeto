@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento Ultra Premium</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #cce7f5, #e0f0fa);
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .convite-container {
+            background-color: #ffffff;
+            max-width: 700px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            border-radius: 0 0 30px 30px;
+            position: relative;
+        }
+
+        /* BANNER HERO */
+        .banner {
+            position: relative;
+            height: 450px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* CARROSSEL DE FOTOS */
+        .slides img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: slideAnimation 12s infinite;
+            opacity: 0;
+            transition: transform 1.5s ease;
+        }
+
+        .slides img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slides img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .slides img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes slideAnimation {
+
+            0%,
+            41%,
+            100% {
+                opacity: 0;
+            }
+
+            8%,
+            33% {
+                opacity: 1;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(75, 122, 191, 0.3), rgba(31, 53, 96, 0.6));
+        }
+
+        /* NOMES DOS NOIVOS */
+        .nomes-banner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 3.5rem;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+            animation: fadeInText 2s ease forwards;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* DATA DO EVENTO */
+        .data-evento {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #3560a0;
+            font-family: 'Great Vibes', cursive;
+            margin: 1rem 0 1.5rem 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* MENSAGEM */
+        .mensagem {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #2f4a72;
+            margin: 0.5rem 2rem 2rem 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* BOTÃO RSVP */
+        .btn-confirmar {
+            display: block;
+            margin: 0 auto 2.5rem auto;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #4b7abf, #6791c7);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-confirmar:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+            background: linear-gradient(135deg, #3560a0, #4b7abf);
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            padding: 1.5rem 2rem 2.5rem 2rem;
+        }
+
+        .card {
+            background: rgba(240, 248, 255, 0.95);
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease, transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #1f3560;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card:hover {
+            transform: translateY(-7px) scale(1.02);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #f0f8ff, #e0f0fa);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li::before {
+            content: "✔";
+            margin-right: 0.5rem;
+            color: #4b7abf;
+        }
+
+        /* MAPA */
+        .mapa {
+            width: 100%;
+            height: 220px;
+            background-color: #d0e6f7;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f3560;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .mapa:hover {
+            transform: scale(1.03);
+        }
+
+        /* RODAPÉ */
+        .rodape {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #3560a0;
+            margin: 1rem 2rem 2rem 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* RESPONSIVO */
+        @media(min-width:650px) {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cards .card:nth-child(3) {
+                grid-column: span 2;
+            }
+        }
+
+        /* FOGOS AVANÇADOS */
+        .fogo {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            mix-blend-mode: screen;
+            animation: explode 1.2s ease-out forwards;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="convite-container">
+        <div class="banner" id="banner">
+            <div class="slides">
+                <img src="casal.jpeg" alt="Foto dos noivos 1">
+                <img src="casal2.jpeg" alt="Foto dos noivos 2">
+                <img src="casal3.jpeg" alt="Foto dos noivos 3">
+            </div>
+            <div class="overlay"></div>
+            <div class="nomes-banner">Kelly & Thiago</div>
+        </div>
+
+        <p class="data-evento">12 de Outubro de 2025 - 16:00</p>
+        <p class="mensagem">É com muita alegria que convidamos você para celebrar conosco este momento especial!</p>
+        <button class="btn-confirmar">CONFIRMAR PRESENÇA</button>
+
+        <div class="cards">
+            <a href="convidados.html" class="card">
+                <h3>Lista de Convidados</h3>
+                <ul>
+                    <li>Ana Silva</li>
+                    <li>Pedro Souza</li>
+                    <li>Mariana Lima</li>
+                </ul>
+            </a>
+            <a href="presentes.html" class="card">
+                <h3>Lista de Presentes</h3>
+                <p>Jogo de panelas <span style="font-size:0.8rem;color:#2f4a72;">INDISPONÍVEL</span></p>
+            </a>
+            <a href="localizacao.html" class="card">
+                <h3>Localização</h3>
+                <div class="mapa">MAPA AQUI</div>
+            </a>
+        </div>
+        <p class="rodape">Esperamos você para celebrar conosco este momento especial!</p>
+    </div>
+
+    <script>
+        const banner = document.getElementById('banner');
+
+        // Função para criar partículas de fogo
+        function criarFogo() {
+            const fogo = document.createElement('div');
+            fogo.classList.add('fogo');
+            const size = Math.random() * 10 + 5;
+            fogo.style.width = size + 'px';
+            fogo.style.height = size + 'px';
+            const hue = Math.random() * 360;
+            fogo.style.background = `hsl(${hue},100%,70%)`;
+            fogo.style.left = Math.random() * banner.offsetWidth + 'px';
+            fogo.style.top = Math.random() * banner.offsetHeight + 'px';
+
+            // Criar partículas menores (rastros)
+            const particulas = [];
+            const count = 5 + Math.floor(Math.random() * 5);
+            for (let i = 0; i < count; i++) {
+                const p = document.createElement('div');
+                p.classList.add('fogo');
+                p.style.width = size / 2 + 'px';
+                p.style.height = size / 2 + 'px';
+                const angle = Math.random() * 2 * Math.PI;
+                const distance = Math.random() * 80 + 30;
+                p.style.left = parseFloat(fogo.style.left) + Math.cos(angle) * distance + 'px';
+                p.style.top = parseFloat(fogo.style.top) + Math.sin(angle) * distance + 'px';
+                p.style.background = `hsl(${hue},100%,70%)`;
+                banner.appendChild(p);
+                particulas.push(p);
+                setTimeout(() => p.remove(), 1200);
+            }
+
+            banner.appendChild(fogo);
+            setTimeout(() => fogo.remove(), 1200);
+        }
+
+        // Cria fogos aleatórios a cada 300ms
+        setInterval(criarFogo, 300);
+    </script>
+</body>
+
+</html>
