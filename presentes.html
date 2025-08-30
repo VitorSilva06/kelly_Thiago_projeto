@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes — Estilo E-commerce</title>
+    <style>
+        /* ================= LISTA DE PRESENTES ================= */
+
+        /* Banner da seção */
+        .section-banner {
+            background: linear-gradient(135deg, #4b7abf, #6791c7);
+            color: #fff;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-radius: 20px;
+            margin: 2rem auto 1rem auto;
+            max-width: 700px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .section-banner h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-banner p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Container das categorias */
+        .category-container {
+            margin: 2rem auto;
+            max-width: 700px;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        /* Título da categoria */
+        .category-title {
+            font-size: 1.6rem;
+            color: #3560a0;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            border-left: 5px solid #4b7abf;
+            padding-left: 0.5rem;
+        }
+
+        /* Grid responsivo dos cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media(min-width:600px) {
+            .cards-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Card estilo e-commerce */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Imagem do produto */
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Conteúdo do card */
+        .card-body {
+            flex: 1;
+            padding: 1rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: #1f3560;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #444;
+            flex: 1;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Preço */
+        .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #4b7abf;
+            margin-bottom: 1rem;
+        }
+
+        /* Botão */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4b7abf, #6791c7);
+            color: #fff;
+            padding: 0.8rem;
+            border-radius: 25px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #3560a0, #4b7abf);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section-banner">
+        <h1>🎁 Lista de Presentes</h1>
+        <p>Escolha um presente especial para o nosso novo lar</p>
+    </div>
+
+    <!-- Cozinha -->
+    <div class="category-container">
+        <h2 class="category-title">🍳 Cozinha</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/r/e/refrigerador-geladeira-electrolux-inox-frost-free-480-litros-im7s_1071118_1.webp" alt="Geladeira">
+                <div class="card-body">
+                    <h3>Geladeira Frost Free</h3>
+                    <p>Geladeira moderna, espaçosa e econômica para conservar nossos alimentos.</p>
+                    <div class="price">R$ 6.799,00</div>
+                    <a href="https://www.havan.com.br/refrigerador-geladeira-electrolux-inox-frost-free-480-litros-im7s/p" class="btn">Presentear</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/f/o/fogao-cooktop-atlas-agile-up-5-bocas_1167851.webp"
+                    alt="Cooktop">
+                <div class="card-body">
+                    <h3>Cooktop 4 bocas</h3>
+                    <p>Praticidade e estilo para o preparo das nossas refeições.</p>
+                    <div class="price">R$ 399,00</div>
+                    <a href="https://www.havan.com.br/fogao-cooktop-atlas-agile-up-5-bocas-bivolt/p"
+                        class="btn">Presentear</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://imgs.casasbahia.com.br/55058773/1g.jpg?imwidth=500" alt="Airfryer">
+                <div class="card-body">
+                    <h3>Airfryer</h3>
+                    <p>Mais saúde e praticidade na cozinha com frituras sem óleo.</p>
+                    <div class="price">R$ 270,66</div>
+                    <a href="https://www.casasbahia.com.br/fritadeira-eletrica-sem-oleo-air-fryer-britania-bfr40pi-43l-preta-e-inox/p/55058773?utm_source=Bing&utm_medium=BuscaOrganica&utm_campaign=DescontoEspecial" class="btn">Presentear</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sala -->
+    <div class="category-container">
+        <h2 class="category-title">🛋️ Sala</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61wuXFPiV6L._AC_SX679_.jpg" alt="Sofá">
+                <div class="card-body">
+                    <h3>Sofá 3 lugares</h3>
+                    <p>Conforto e estilo para receber nossas visitas e relaxar.</p>
+                    <div class="price">R$ 1.969,00</div>
+                    <a href="https://www.amazon.com.br/Lugares-Retr%C3%A1til-Reclin%C3%A1vel-Senses-Velusoft/dp/B0CFD9YJR7/ref=sr_1_2_sspa?adgrpid=1151190361988109&dib=eyJ2IjoiMSJ9.IfNj5fd7kIjLiDuoObpPM6P7bi_DrS4b3hXq_jvNNlXzksYOO26-cd09pWOsq2WkB9Zf7i-Yf9fOzsQw_3cb0uNoOXeyJa_w08aNqCcnx8xGotsdxnXUnQVzv6bikf0OC7_krgRKHYfsoHiW8kZxv1wfEOHxiRH0rYr8dM5jcyfKEu0U6_7aBqdb2-b_eo3_7G5N8rgeGn9W5QLaXtfa8HKNOpqxf9f1LsqSvhy7AZ-kLVCoAhkQc3XgVyAvWsj0-HOa5OxdUSikg9MMH2GLQkBGmcpsvXUenMxrKK6Xrd0.2vzbsSg6JqhpfrAcBCaeDyxJsShse2Y8ylgaJM8X1AY&dib_tag=se&hvadid=71949550805141&hvbmt=be&hvdev=c&hvlocphy=183090&hvnetw=o&hvqmt=e&hvtargid=kwd-71950089498667%3Aloc-20&hydadcr=24595_13582939&keywords=sof%C3%A1+de+3+lugares&mcid=a30e8ee3faa13d009609281c47b9c7ea&qid=1756434205&sr=8-2-spons&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" class="btn">Presentear</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdw7-mcqsee21t5ck8d@resize_w900_nl.webp" alt="Mesa de Centro">
+                <div class="card-body">
+                    <h3>Mesa de centro</h3>
+                    <p>Funcional e elegante para completar a decoração da sala.</p>
+                    <div class="price">R$ 59,99</div>
+                    <a href="https://shopee.com.br/Mesa-De-Centro-Sala-Retangular-P%C3%A9s-Palito-PVC-Preta-Retr%C3%B4-Anti-Umidade-i.334173919.40860690585?sp_atk=6214fa04-cb41-45c4-a920-7dc45ea825f5&xptdk=6214fa04-cb41-45c4-a920-7dc45ea825f5" class="btn">Presentear</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quarto -->
+    <div class="category-container">
+        <h2 class="category-title">🛏️ Quarto</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_924495-MLU75944287154_052024-F.webp" alt="Cama Queen">
+                <div class="card-body">
+                    <h3>Cama Queen</h3>
+                    <p>Nosso descanso com muito mais conforto e aconchego.</p>
+                    <div class="price">R$ 2.479,00</div>
+                    <a href="https://www.mercadolivre.com.br/cama-box-queen-colcho-ortofirm-box-158x198x67-one-face-espuma-d33-dourado/p/MLB21673965?pdp_filters=item_id%3AMLB3483950963&from=gshop&matt_tool=92309335&matt_word=&matt_source=bing&matt_campaign=MLB_ML_BING_AO_HOME%20%26%20INDUSTRY-ALL-ALL_X_PLA_ALLB_TXS_ALL&matt_campaign_id=382858298&matt_ad_group=HOME%20%26%20INDUSTRY&matt_match_type=e&matt_network=o&matt_device=c&matt_keyword=default&msclkid=271a4b266f641ec8a5e423977f127030&utm_source=bing&utm_medium=cpc&utm_campaign=MLB_ML_BING_AO_HOME%20%26%20INDUSTRY-ALL-ALL_X_PLA_ALLB_TXS_ALL&utm_term=4581252658057041&utm_content=HOME%20%26%20INDUSTRY" class="btn">Presentear</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://a-static.mlcdn.com.br/800x560/guarda-roupa-casal-com-espelho-3-portas-de-correr-6-gavetas-demobile-londres/magazineluiza/237139600/bbfbba0d7160a28b13b72d6df797c860.jpg" alt="Guarda-Roupa">
+                <div class="card-body">
+                    <h3>Guarda-Roupa 6 portas</h3>
+                    <p>Espaçoso e moderno para organizar nossas roupas.</p>
+                    <div class="price">R$ 1.519,91</div>
+                    <a href="https://www.magazineluiza.com.br/guarda-roupa-casal-com-espelho-3-portas-de-correr-6-gavetas-demobile-londres/p/237139600/mo/guro/" class="btn">Presentear</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
